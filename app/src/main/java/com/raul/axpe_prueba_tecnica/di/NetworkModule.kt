@@ -22,7 +22,7 @@ object NetworkModule {
     @Singleton
     fun provideRetrofit(@ApplicationContext context: Context): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://randomuser.me/api")
+            .baseUrl("https://randomuser.me/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(provideOkHttpClient(context))
             .build()
